@@ -126,7 +126,7 @@ runCGSModels <- function(
     
     if (nCores > 1){
       # Run models with SNOW
-      print('Exporting data...')
+      print('Exporting data... This is changed.')
       cl <- makeCluster(nCores, type = "SOCK")
       registerDoSNOW(cl)
       clusterEvalQ(cl, library(lda))
