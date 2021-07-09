@@ -613,7 +613,7 @@ runWarpLDAModels <- function(
     }
     if (nCores > 1){
       # Parallelize
-      print('Exporting data...')
+      print('Exporting data... Changed')
       cl <- makeCluster(nCores, type = "SOCK")
       registerDoSNOW(cl)
       clusterEvalQ(cl, library(text2vec))
