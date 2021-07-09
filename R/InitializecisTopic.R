@@ -451,7 +451,8 @@ createcisTopicObject <- function(
   )
   
   # Binarize and filter matrix
-  object.binary.count.matrix <- Matrix(1*(count.matrix >= is.acc), sparse=TRUE)
+  #object.binary.count.matrix <- Matrix(1*(count.matrix >= is.acc), sparse=TRUE)
+  object.binary.count.matrix <- Matrix(count.matrix, sparse=TRUE)
   num.acc.cells <- Matrix::rowSums(object.binary.count.matrix)
   num.acc.regions <- Matrix::colSums(object.binary.count.matrix)
   cells.use <- which(num.acc.regions >= min.regions)
